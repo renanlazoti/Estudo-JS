@@ -22,11 +22,17 @@ const express = require('express');
 // importação do modulo do mongoose
 const mongoose = require('mongoose');
 
+// importação do modulo do cors
+const cors = require('cors');
+
 // criação do app referente ao express
 const app = express();
 
 // preparar o servidor para receber json
 app.use(express.json());
+
+// uso do cors para desbloqueio de acesso
+app.use(cors())
 
 /*
     Caminho do banco de dados mongodb
